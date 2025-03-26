@@ -1,0 +1,15 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="container my-4">
+    <h2><%= product.name %></h2>
+    <% if (product.imageUrl) { %>
+    <img src="<%= product.imageUrl %>" alt="<%= product.name %>" class="img-fluid mb-4">
+    <% } else { %>
+    <img src="https://via.placeholder.com/600x400" alt="No Image" class="img-fluid mb-4">
+    <% } %>
+    <p><strong>Description:</strong> <%= product.description %></p>
+    <p><strong>Price:</strong> $<%= product.price.toFixed(2) %></p>
+    <a href="/products" class="btn btn-secondary">Back to Products</a>
+</div>
+
+<%- include('../partials/footer.ejs') %>
